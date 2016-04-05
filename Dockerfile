@@ -14,3 +14,6 @@ WORKDIR $PROJECT
 
 RUN ./build/composer.phar install
 RUN ./build/build-all
+
+RUN chmod -R +w $PROJECT/api/
+RUN chown -R www-data:www-data $PROJECT/
